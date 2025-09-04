@@ -1,0 +1,60 @@
+/* ==========================================================================
+   Stone + Emerald Color Scheme
+   Warm stone backgrounds with fresh emerald text
+   ========================================================================== */
+
+.theme-dark {
+  /* Background Tokens - Stone scheme */
+  --token-background-50: var(--color-stone-50);
+  --token-background-100: var(--color-stone-100);
+  --token-background-200: var(--color-stone-200);
+  --token-background-300: var(--color-stone-300);
+  --token-background-400: var(--color-stone-400);
+  --token-background-500: var(--color-stone-500);
+  --token-background-600: var(--color-stone-600);
+  --token-background-700: var(--color-stone-700);
+  --token-background-800: var(--color-stone-800);
+  --token-background-900: var(--color-stone-900);
+  --token-background-950: var(--color-stone-950);
+
+  /* Text Tokens - Emerald scheme */
+  --token-text-50: var(--color-emerald-50);
+  --token-text-100: var(--color-emerald-100);
+  --token-text-200: var(--color-emerald-200);
+  --token-text-300: var(--color-emerald-300);
+  --token-text-400: var(--color-emerald-400);
+  --token-text-500: var(--color-emerald-500);
+  --token-text-600: var(--color-emerald-600);
+  --token-text-700: var(--color-emerald-700);
+  --token-text-800: var(--color-emerald-800);
+  --token-text-900: var(--color-emerald-900);
+  --token-text-950: var(--color-emerald-950);
+}
+
+.theme-light {
+  /* Background Tokens - Light stone scheme */
+  --token-background-50: var(--color-stone-50);
+  --token-background-100: var(--color-stone-100);
+  --token-background-200: var(--color-stone-200);
+  --token-background-300: var(--color-stone-300);
+  --token-background-400: var(--color-stone-400);
+  --token-background-500: var(--color-stone-500);
+  --token-background-600: var(--color-stone-600);
+  --token-background-700: var(--color-stone-700);
+  --token-background-800: var(--color-stone-800);
+  --token-background-900: var(--color-stone-900);
+  --token-background-950: var(--color-stone-950);
+
+  /* Text Tokens - Darker emerald for light mode readability */
+  --token-text-50: var(--color-emerald-950);
+  --token-text-100: var(--color-emerald-900);
+  --token-text-200: var(--color-emerald-800);
+  --token-text-300: var(--color-emerald-700);
+  --token-text-400: var(--color-emerald-600);
+  --token-text-500: var(--color-emerald-500);
+  --token-text-600: var(--color-emerald-400);
+  --token-text-700: var(--color-emerald-300);
+  --token-text-800: var(--color-emerald-200);
+  --token-text-900: var(--color-emerald-100);
+  --token-text-950: var(--color-emerald-50);
+}

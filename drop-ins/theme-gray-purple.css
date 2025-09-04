@@ -1,0 +1,60 @@
+/* ==========================================================================
+   Gray + Purple Color Scheme
+   Neutral gray backgrounds with creative purple text
+   ========================================================================== */
+
+.theme-dark {
+  /* Background Tokens - Gray scheme */
+  --token-background-50: var(--color-gray-50);
+  --token-background-100: var(--color-gray-100);
+  --token-background-200: var(--color-gray-200);
+  --token-background-300: var(--color-gray-300);
+  --token-background-400: var(--color-gray-400);
+  --token-background-500: var(--color-gray-500);
+  --token-background-600: var(--color-gray-600);
+  --token-background-700: var(--color-gray-700);
+  --token-background-800: var(--color-gray-800);
+  --token-background-900: var(--color-gray-900);
+  --token-background-950: var(--color-gray-950);
+
+  /* Text Tokens - Purple scheme */
+  --token-text-50: var(--color-purple-50);
+  --token-text-100: var(--color-purple-100);
+  --token-text-200: var(--color-purple-200);
+  --token-text-300: var(--color-purple-300);
+  --token-text-400: var(--color-purple-400);
+  --token-text-500: var(--color-purple-500);
+  --token-text-600: var(--color-purple-600);
+  --token-text-700: var(--color-purple-700);
+  --token-text-800: var(--color-purple-800);
+  --token-text-900: var(--color-purple-900);
+  --token-text-950: var(--color-purple-950);
+}
+
+.theme-light {
+  /* Background Tokens - Light gray scheme */
+  --token-background-50: var(--color-gray-50);
+  --token-background-100: var(--color-gray-100);
+  --token-background-200: var(--color-gray-200);
+  --token-background-300: var(--color-gray-300);
+  --token-background-400: var(--color-gray-400);
+  --token-background-500: var(--color-gray-500);
+  --token-background-600: var(--color-gray-600);
+  --token-background-700: var(--color-gray-700);
+  --token-background-800: var(--color-gray-800);
+  --token-background-900: var(--color-gray-900);
+  --token-background-950: var(--color-gray-950);
+
+  /* Text Tokens - Darker purple for light mode readability */
+  --token-text-50: var(--color-purple-950);
+  --token-text-100: var(--color-purple-900);
+  --token-text-200: var(--color-purple-800);
+  --token-text-300: var(--color-purple-700);
+  --token-text-400: var(--color-purple-600);
+  --token-text-500: var(--color-purple-500);
+  --token-text-600: var(--color-purple-400);
+  --token-text-700: var(--color-purple-300);
+  --token-text-800: var(--color-purple-200);
+  --token-text-900: var(--color-purple-100);
+  --token-text-950: var(--color-purple-50);
+}

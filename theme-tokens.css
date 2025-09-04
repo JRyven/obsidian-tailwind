@@ -1,0 +1,501 @@
+/* ==========================================================================
+   TailWind Theme Token System
+   Semantic tokens that map to Tailwind CSS design system
+   ========================================================================== */
+
+:root {
+  /* ==========================================================================
+     Semantic Color Token Mappings - Default: neutral + lime
+     ========================================================================== */
+  
+  /* Background Color Tokens - Default: neutral scheme */
+  --token-background-50: var(--color-neutral-50);
+  --token-background-100: var(--color-neutral-100);
+  --token-background-200: var(--color-neutral-200);
+  --token-background-300: var(--color-neutral-300);
+  --token-background-400: var(--color-neutral-400);
+  --token-background-500: var(--color-neutral-500);
+  --token-background-600: var(--color-neutral-600);
+  --token-background-700: var(--color-neutral-700);
+  --token-background-800: var(--color-neutral-800);
+  --token-background-900: var(--color-neutral-900);
+  --token-background-950: var(--color-neutral-950);
+
+  /* Text Color Tokens - Default: lime scheme */
+  --token-text-50: var(--color-lime-50);
+  --token-text-100: var(--color-lime-100);
+  --token-text-200: var(--color-lime-200);
+  --token-text-300: var(--color-lime-300);
+  --token-text-400: var(--color-lime-400);
+  --token-text-500: var(--color-lime-500);
+  --token-text-600: var(--color-lime-600);
+  --token-text-700: var(--color-lime-700);
+  --token-text-800: var(--color-lime-800);
+  --token-text-900: var(--color-lime-900);
+  --token-text-950: var(--color-lime-950);
+
+  /* ==========================================================================
+     Design System Tokens
+     ========================================================================== */
+
+  /* Spacing tokens - map to Tailwind spacing */
+  --token-space-0: 0;
+  --token-space-px: 1px;
+  --token-space-0-5: 0.125rem;
+  --token-space-1: 0.25rem;
+  --token-space-1-5: 0.375rem;
+  --token-space-2: 0.5rem;
+  --token-space-2-5: 0.625rem;
+  --token-space-3: 0.75rem;
+  --token-space-3-5: 0.875rem;
+  --token-space-4: 1rem;
+  --token-space-5: 1.25rem;
+  --token-space-6: 1.5rem;
+  --token-space-7: 1.75rem;
+  --token-space-8: 2rem;
+  --token-space-9: 2.25rem;
+  --token-space-10: 2.5rem;
+  --token-space-11: 2.75rem;
+  --token-space-12: 3rem;
+  --token-space-14: 3.5rem;
+  --token-space-16: 4rem;
+  --token-space-20: 5rem;
+  --token-space-24: 6rem;
+  --token-space-32: 8rem;
+
+  /* Typography tokens - map to Tailwind typography */
+  --token-text-xs: 0.75rem;
+  --token-text-sm: 0.875rem;
+  --token-text-base: 1rem;
+  --token-text-lg: 1.125rem;
+  --token-text-xl: 1.25rem;
+  --token-text-2xl: 1.5rem;
+  --token-text-3xl: 1.875rem;
+  --token-text-4xl: 2.25rem;
+  --token-text-5xl: 3rem;
+  --token-text-6xl: 3.75rem;
+  --token-text-7xl: 4.5rem;
+
+  /* Line height tokens */
+  --token-leading-none: 1;
+  --token-leading-tight: 1.25;
+  --token-leading-snug: 1.375;
+  --token-leading-normal: 1.5;
+  --token-leading-relaxed: 1.625;
+  --token-leading-loose: 2;
+
+  /* Border radius tokens */
+  --token-radius-none: 0;
+  --token-radius-sm: 0.125rem;
+  --token-radius: 0.25rem;
+  --token-radius-md: 0.375rem;
+  --token-radius-lg: 0.5rem;
+  --token-radius-xl: 0.75rem;
+  --token-radius-2xl: 1rem;
+  --token-radius-3xl: 1.5rem;
+  --token-radius-full: 9999px;
+
+  /* Shadow tokens */
+  --token-shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --token-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --token-shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --token-shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --token-shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --token-shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+
+  /* ==========================================================================
+     Obsidian Semantic Tokens - Theme-specific mappings
+     ========================================================================== */
+
+  /* Background semantic tokens */
+  --token-bg-primary: var(--token-background-800);
+  --token-bg-primary-alt: var(--token-background-700);
+  --token-bg-secondary: var(--token-background-900);
+  --token-bg-secondary-alt: var(--token-background-950);
+  --token-bg-accent: var(--token-background-950);
+  --token-bg-modifier-border: var(--token-background-600);
+  --token-bg-modifier-hover: color-mix(in srgb, var(--token-text-500) 10%, transparent);
+
+  /* Text semantic tokens */
+  --token-text-normal: var(--token-text-100);
+  --token-text-muted: var(--token-text-200);
+  --token-text-faint: var(--token-text-300);
+  --token-text-accent: var(--token-text-400);
+  --token-text-accent-hover: var(--token-text-300);
+  --token-text-error: var(--color-red-400);
+  --token-text-success: var(--color-emerald-400);
+  --token-text-warning: var(--color-amber-400);
+
+  /* Interactive semantic tokens */
+  --token-interactive-normal: var(--token-background-700);
+  --token-interactive-hover: var(--token-background-600);
+  --token-interactive-accent: var(--token-text-600);
+  --token-interactive-accent-hover: var(--token-text-500);
+
+  /* Header semantic tokens */
+  --token-header-h1-size: var(--token-text-3xl);
+  --token-header-h1-leading: var(--token-leading-tight);
+  --token-header-h1-bg: var(--token-background-700);
+  --token-header-h1-color: var(--token-text-100);
+  --token-header-h1-border: var(--token-text-500);
+  --token-header-h1-padding-y: var(--token-space-4);
+
+  --token-header-h2-size: var(--token-text-2xl);
+  --token-header-h2-leading: var(--token-leading-tight);
+  --token-header-h2-bg: var(--token-background-700);
+  --token-header-h2-color: var(--token-text-200);
+  --token-header-h2-border: var(--token-text-600);
+  --token-header-h2-padding-y: var(--token-space-3);
+
+  --token-header-h3-size: var(--token-text-xl);
+  --token-header-h3-leading: var(--token-leading-snug);
+  --token-header-h3-bg: var(--token-background-600);
+  --token-header-h3-color: var(--token-text-300);
+  --token-header-h3-border: var(--token-text-700);
+  --token-header-h3-padding-y: var(--token-space-2);
+
+  --token-header-h4-size: var(--token-text-lg);
+  --token-header-h4-leading: var(--token-leading-snug);
+  --token-header-h4-bg: var(--token-background-600);
+  --token-header-h4-color: var(--token-text-400);
+  --token-header-h4-border: var(--token-text-800);
+  --token-header-h4-padding-y: var(--token-space-1);
+
+  --token-header-h5-size: var(--token-text-base);
+  --token-header-h5-leading: var(--token-leading-normal);
+  --token-header-h5-bg: var(--token-background-300);
+  --token-header-h5-color: var(--token-text-700);
+  --token-header-h5-border: var(--token-text-800);
+  --token-header-h5-padding-y: var(--token-space-1);
+
+  --token-header-h6-size: var(--token-text-sm);
+  --token-header-h6-leading: var(--token-leading-normal);
+  --token-header-h6-bg: var(--token-background-200);
+  --token-header-h6-color: var(--token-text-600);
+  --token-header-h6-border: var(--token-text-900);
+  --token-header-h6-padding-y: var(--token-space-1);
+
+  /* Button semantic tokens */
+  --token-button-bg: var(--token-text-600);
+  --token-button-color: var(--token-background-50);
+  --token-button-bg-hover: var(--token-text-500);
+  --token-button-color-hover: var(--token-background-50);
+  --token-button-padding-x: var(--token-space-4);
+  --token-button-padding-y: var(--token-space-2);
+  --token-button-radius: var(--token-radius-md);
+
+  /* Tab semantic tokens */
+  --token-tab-bg: var(--token-bg-primary);
+  --token-tab-bg-active: var(--token-bg-primary-alt);
+  --token-tab-color: var(--token-text-muted);
+  --token-tab-color-active: var(--token-text-normal);
+  --token-tab-border: var(--token-bg-modifier-border);
+  --token-tab-padding-x: var(--token-space-3);
+  --token-tab-padding-y: var(--token-space-2);
+
+  /* Sidebar semantic tokens */
+  --token-sidebar-bg: var(--token-bg-secondary);
+  --token-sidebar-border: var(--token-bg-modifier-border);
+  --token-sidebar-item-padding-x: var(--token-space-2);
+  --token-sidebar-item-padding-y: var(--token-space-1);
+  --token-sidebar-item-radius: var(--token-radius);
+
+  /* Animation tokens - for interactive theme */
+  --token-transition-fast: 150ms ease;
+  --token-transition-normal: 250ms ease;
+  --token-transition-slow: 350ms ease;
+  --token-scale-hover: 1.02;
+  --token-scale-active: 0.98;
+}
+
+/* ==========================================================================
+   Light Theme Overrides
+   ========================================================================== */
+
+.theme-light {
+  /* Background semantic tokens - Light theme */
+  --token-bg-primary: var(--token-background-50);
+  --token-bg-primary-alt: var(--token-background-100);
+  --token-bg-secondary: var(--token-background-100);
+  --token-bg-secondary-alt: var(--token-background-200);
+  --token-bg-accent: #ffffff;
+  --token-bg-modifier-border: var(--token-background-200);
+  --token-bg-modifier-hover: color-mix(in srgb, var(--token-text-500) 8%, transparent);
+
+  /* Text semantic tokens - Light theme */
+  --token-text-normal: var(--token-text-900);
+  --token-text-muted: var(--token-text-700);
+  --token-text-faint: var(--token-text-500);
+  --token-text-accent: var(--token-text-600);
+  --token-text-accent-hover: var(--token-text-700);
+  --token-text-error: var(--color-red-600);
+  --token-text-success: var(--color-emerald-600);
+  --token-text-warning: var(--color-amber-600);
+
+  /* Interactive semantic tokens - Light theme */
+  --token-interactive-normal: var(--token-background-100);
+  --token-interactive-hover: var(--token-background-200);
+  --token-interactive-accent: var(--token-text-600);
+  --token-interactive-accent-hover: var(--token-text-700);
+
+  /* Header light theme adjustments */
+  --token-header-h1-bg: var(--token-background-100);
+  --token-header-h1-color: var(--token-text-900);
+  --token-header-h1-border: var(--token-text-500);
+  
+  --token-header-h2-bg: var(--token-background-100);
+  --token-header-h2-color: var(--token-text-800);
+  --token-header-h2-border: var(--token-text-600);
+  
+  --token-header-h3-bg: var(--token-background-200);
+  --token-header-h3-color: var(--token-text-700);
+  --token-header-h3-border: var(--token-text-700);
+  
+  --token-header-h4-bg: var(--token-background-200);
+  --token-header-h4-color: var(--token-text-600);
+  --token-header-h4-border: var(--token-text-800);
+  
+  --token-header-h5-bg: var(--token-background-300);
+  --token-header-h5-color: var(--token-text-700);
+  --token-header-h5-border: var(--token-text-800);
+  
+  --token-header-h6-bg: var(--token-background-300);
+  --token-header-h6-color: var(--token-text-600);
+  --token-header-h6-border: var(--token-text-900);
+
+  /* Button light theme adjustments */
+  --token-button-bg: var(--token-text-600);
+  --token-button-color: #ffffff;
+  --token-button-bg-hover: var(--token-text-700);
+  --token-button-color-hover: #ffffff;
+
+  /* Sidebar light theme adjustments */
+  --token-sidebar-bg: var(--token-bg-secondary);
+  
+  /* Light theme shadow adjustments - softer shadows */
+  --token-shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.03);
+  --token-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.05), 0 1px 2px -1px rgb(0 0 0 / 0.05);
+  --token-shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+  --token-shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.05), 0 4px 6px -4px rgb(0 0 0 / 0.05);
+  --token-shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.05), 0 8px 10px -6px rgb(0 0 0 / 0.05);
+  --token-shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.1);
+}
+
+/* ==========================================================================
+   Obsidian Component Implementations using Token System
+   ========================================================================== */
+
+/* Apply Obsidian variables using our token system */
+body {
+  /* Primary background colors */
+  --background-primary: var(--token-bg-primary);
+  --background-primary-alt: var(--token-bg-primary-alt);
+  --background-secondary: var(--token-bg-secondary);
+  --background-secondary-alt: var(--token-bg-secondary-alt);
+  --background-accent: var(--token-bg-accent);
+
+  /* Text colors */
+  --text-normal: var(--token-text-normal);
+  --text-muted: var(--token-text-muted);
+  --text-faint: var(--token-text-faint);
+  --text-accent: var(--token-text-accent);
+  --text-accent-hover: var(--token-text-accent-hover);
+  --text-error: var(--token-text-error);
+  --text-success: var(--token-text-success);
+  --text-warning: var(--token-text-warning);
+
+  /* Interactive colors */
+  --interactive-normal: var(--token-interactive-normal);
+  --interactive-hover: var(--token-interactive-hover);
+  --interactive-accent: var(--token-interactive-accent);
+  --interactive-accent-hover: var(--token-interactive-accent-hover);
+
+  /* Border and modifier colors */
+  --background-modifier-border: var(--token-bg-modifier-border);
+  --background-modifier-hover: var(--token-bg-modifier-hover);
+  --background-modifier-box-shadow: var(--token-shadow-lg);
+}
+
+/* Headers using token system */
+.cm-active.HyperMD-header-1,
+.markdown-rendered div > h1 {
+  font-size: var(--token-header-h1-size);
+  line-height: var(--token-header-h1-leading);
+  background-color: var(--token-header-h1-bg);
+  color: var(--token-header-h1-color);
+  border-left-color: var(--token-header-h1-border);
+  padding-top: var(--token-header-h1-padding-y);
+  padding-bottom: var(--token-header-h1-padding-y);
+  padding-left: var(--token-space-6);
+  padding-right: var(--token-space-4);
+  border-radius: var(--token-radius-md);
+  border-left-width: var(--token-space-1);
+  border-left-style: solid;
+  margin: var(--token-space-4) 0;
+}
+
+.cm-active.HyperMD-header-2,
+.markdown-rendered div > h2 {
+  font-size: var(--token-header-h2-size);
+  line-height: var(--token-header-h2-leading);
+  background-color: var(--token-header-h2-bg);
+  color: var(--token-header-h2-color);
+  border-left-color: var(--token-header-h2-border);
+  padding-top: var(--token-header-h2-padding-y);
+  padding-bottom: var(--token-header-h2-padding-y);
+  padding-left: var(--token-space-6);
+  padding-right: var(--token-space-4);
+  border-radius: var(--token-radius-md);
+  border-left-width: var(--token-space-1);
+  border-left-style: solid;
+  margin: var(--token-space-4) 0;
+}
+
+.cm-active.HyperMD-header-3,
+.markdown-rendered div > h3 {
+  font-size: var(--token-header-h3-size);
+  line-height: var(--token-header-h3-leading);
+  background-color: var(--token-header-h3-bg);
+  color: var(--token-header-h3-color);
+  border-left-color: var(--token-header-h3-border);
+  padding-top: var(--token-header-h3-padding-y);
+  padding-bottom: var(--token-header-h3-padding-y);
+  padding-left: var(--token-space-6);
+  padding-right: var(--token-space-4);
+  border-radius: var(--token-radius-md);
+  border-left-width: var(--token-space-1);
+  border-left-style: solid;
+  margin: var(--token-space-4) 0;
+}
+
+.cm-active.HyperMD-header-4,
+.markdown-rendered div > h4 {
+  font-size: var(--token-header-h4-size);
+  line-height: var(--token-header-h4-leading);
+  background-color: var(--token-header-h4-bg);
+  color: var(--token-header-h4-color);
+  border-left-color: var(--token-header-h4-border);
+  padding-top: var(--token-header-h4-padding-y);
+  padding-bottom: var(--token-header-h4-padding-y);
+  padding-left: var(--token-space-6);
+  padding-right: var(--token-space-4);
+  border-radius: var(--token-radius-md);
+  border-left-width: var(--token-space-1);
+  border-left-style: solid;
+  margin: var(--token-space-4) 0;
+}
+
+.cm-active.HyperMD-header-5,
+.markdown-rendered div > h5 {
+  font-size: var(--token-header-h5-size);
+  line-height: var(--token-header-h5-leading);
+  background-color: var(--token-header-h5-bg);
+  color: var(--token-header-h5-color);
+  border-left-color: var(--token-header-h5-border);
+  padding-top: var(--token-header-h5-padding-y);
+  padding-bottom: var(--token-header-h5-padding-y);
+  padding-left: var(--token-space-6);
+  padding-right: var(--token-space-4);
+  border-radius: var(--token-radius-md);
+  border-left-width: var(--token-space-1);
+  border-left-style: solid;
+  margin: var(--token-space-4) 0;
+}
+
+.cm-active.HyperMD-header-6,
+.markdown-rendered div > h6 {
+  font-size: var(--token-header-h6-size);
+  line-height: var(--token-header-h6-leading);
+  background-color: var(--token-header-h6-bg);
+  color: var(--token-header-h6-color);
+  border-left-color: var(--token-header-h6-border);
+  padding-top: var(--token-header-h6-padding-y);
+  padding-bottom: var(--token-header-h6-padding-y);
+  padding-left: var(--token-space-6);
+  padding-right: var(--token-space-4);
+  border-radius: var(--token-radius-md);
+  border-left-width: var(--token-space-1);
+  border-left-style: solid;
+  margin: var(--token-space-4) 0;
+}
+
+/* Buttons using token system */
+button {
+  background-color: var(--token-button-bg);
+  color: var(--token-button-color);
+  padding: var(--token-button-padding-y) var(--token-button-padding-x);
+  border-radius: var(--token-button-radius);
+  border: none;
+  cursor: pointer;
+  transition: all var(--token-transition-fast);
+}
+
+button:hover {
+  background-color: var(--token-button-bg-hover);
+  color: var(--token-button-color-hover);
+}
+
+/* Tabs using token system */
+.workspace-tab-header {
+  background-color: var(--token-tab-bg);
+  color: var(--token-tab-color);
+  border-bottom: 1px solid var(--token-tab-border);
+  padding: var(--token-tab-padding-y) var(--token-tab-padding-x);
+  transition: all var(--token-transition-fast);
+}
+
+.workspace-tab-header.is-active {
+  background-color: var(--token-tab-bg-active);
+  color: var(--token-tab-color-active);
+}
+
+/* Sidebar using token system */
+.nav-folder,
+.nav-file {
+  padding: var(--token-sidebar-item-padding-y) var(--token-sidebar-item-padding-x);
+  border-radius: var(--token-sidebar-item-radius);
+  transition: all var(--token-transition-fast);
+}
+
+.nav-folder:hover,
+.nav-file:hover {
+  background-color: var(--token-interactive-hover);
+}
+
+/* Status bar using token system */
+.status-bar {
+  background-color: var(--token-bg-secondary);
+  border-top: 1px solid var(--token-bg-modifier-border);
+  padding: var(--token-space-1) var(--token-space-2);
+}
+
+/* Inline title using token system */
+.inline-title {
+  font-size: var(--token-header-h1-size);
+  line-height: var(--token-header-h1-leading);
+  color: var(--token-text-accent);
+  font-weight: 700;
+  margin-bottom: var(--token-space-5);
+}
+
+/* Code blocks using token system */
+pre,
+code {
+  background-color: var(--token-bg-primary-alt);
+  border: 1px solid var(--token-bg-modifier-border);
+  border-radius: var(--token-radius);
+  padding: var(--token-space-1);
+}
+
+pre {
+  padding: var(--token-space-4);
+  margin: var(--token-space-2) 0;
+}
+
+/* Blockquotes using token system */
+blockquote {
+  border-left: var(--token-space-1) solid var(--token-text-accent);
+  padding-left: var(--token-space-4);
+  margin: var(--token-space-4) 0;
+  color: var(--token-text-muted);
+}

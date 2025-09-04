@@ -1,0 +1,364 @@
+/* ==========================================================================
+   Interactive Theme Drop-in
+   Adds smooth animations and hover effects to Obsidian elements
+   ========================================================================== */
+
+:root {
+  /* Animation timing tokens */
+  --token-transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --token-transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --token-transition-slow: 350ms cubic-bezier(0.4, 0, 0.2, 1);
+  --token-transition-bounce: 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  
+  /* Scale transforms */
+  --token-scale-hover: 1.02;
+  --token-scale-active: 0.98;
+  --token-scale-focus: 1.05;
+  
+  /* Animation delays */
+  --token-delay-fast: 50ms;
+  --token-delay-normal: 100ms;
+  --token-delay-slow: 200ms;
+}
+
+/* ==========================================================================
+   Button Animations
+   ========================================================================== */
+
+button,
+.clickable-icon,
+.mod-cta,
+.nav-action-button {
+  transition: all var(--token-transition-normal);
+  transform-origin: center;
+}
+
+button:hover,
+.clickable-icon:hover,
+.mod-cta:hover,
+.nav-action-button:hover {
+  transform: scale(var(--token-scale-hover));
+  box-shadow: var(--token-shadow-lg);
+  filter: brightness(1.1);
+}
+
+button:active,
+.clickable-icon:active,
+.mod-cta:active,
+.nav-action-button:active {
+  transform: scale(var(--token-scale-active));
+  transition: all var(--token-transition-fast);
+}
+
+button:focus,
+.clickable-icon:focus,
+.mod-cta:focus,
+.nav-action-button:focus {
+  transform: scale(var(--token-scale-focus));
+  box-shadow: var(--token-shadow-xl);
+  transition: all var(--token-transition-bounce);
+}
+
+/* ==========================================================================
+   Tab Animations
+   ========================================================================== */
+
+.workspace-tab-header {
+  transition: all var(--token-transition-normal);
+  transform-origin: bottom center;
+}
+
+.workspace-tab-header:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: var(--token-shadow-md);
+}
+
+.workspace-tab-header.is-active {
+  transform: translateY(-1px);
+  box-shadow: var(--token-shadow-lg);
+}
+
+.workspace-tab-header:not(.is-active):hover {
+  background-color: var(--token-interactive-hover);
+}
+
+/* ==========================================================================
+   Navigation Animations
+   ========================================================================== */
+
+.nav-folder,
+.nav-file {
+  transition: all var(--token-transition-normal);
+  transform-origin: left center;
+}
+
+.nav-folder:hover,
+.nav-file:hover {
+  transform: translateX(4px) scale(1.01);
+  background-color: var(--token-interactive-hover);
+  box-shadow: var(--token-shadow-sm);
+}
+
+.nav-folder-title,
+.nav-file-title {
+  transition: color var(--token-transition-fast);
+}
+
+.nav-folder:hover .nav-folder-title,
+.nav-file:hover .nav-file-title {
+  color: var(--token-text-accent);
+}
+
+/* Folder collapse icons */
+.nav-folder-collapse-indicator {
+  transition: transform var(--token-transition-normal);
+}
+
+.nav-folder.is-collapsed .nav-folder-collapse-indicator {
+  transform: rotate(-90deg);
+}
+
+/* ==========================================================================
+   Header Animations
+   ========================================================================== */
+
+.cm-active.HyperMD-header-1,
+.cm-active.HyperMD-header-2,
+.cm-active.HyperMD-header-3,
+.cm-active.HyperMD-header-4,
+.cm-active.HyperMD-header-5,
+.cm-active.HyperMD-header-6,
+.markdown-rendered div > :is(h1, h2, h3, h4, h5, h6) {
+  transition: all var(--token-transition-normal);
+  transform-origin: center;
+}
+
+.markdown-rendered div > :is(h1, h2, h3, h4, h5, h6):hover {
+  transform: scale(1.02);
+  box-shadow: var(--token-shadow-lg);
+  filter: brightness(1.05);
+}
+
+/* ==========================================================================
+   Modal and Dialog Animations
+   ========================================================================== */
+
+.modal {
+  animation: modalFadeIn var(--token-transition-slow) var(--token-transition-bounce);
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.modal-close-button {
+  transition: all var(--token-transition-fast);
+}
+
+.modal-close-button:hover {
+  transform: rotate(90deg) scale(1.1);
+  color: var(--token-text-error);
+}
+
+/* ==========================================================================
+   Search and Input Animations
+   ========================================================================== */
+
+input[type="text"],
+input[type="search"],
+textarea,
+.search-input-container input {
+  transition: all var(--token-transition-normal);
+  transform-origin: center;
+}
+
+input[type="text"]:focus,
+input[type="search"]:focus,
+textarea:focus,
+.search-input-container input:focus {
+  transform: scale(1.02);
+  box-shadow: var(--token-shadow-lg);
+  border-color: var(--token-interactive-accent);
+}
+
+/* ==========================================================================
+   Suggestion and Menu Animations
+   ========================================================================== */
+
+.suggestion-container,
+.menu,
+.dropdown {
+  animation: slideInFromTop var(--token-transition-normal) ease-out;
+}
+
+@keyframes slideInFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.suggestion-item,
+.menu-item {
+  transition: all var(--token-transition-fast);
+  transform-origin: left center;
+}
+
+.suggestion-item:hover,
+.menu-item:hover {
+  transform: translateX(4px) scale(1.01);
+  background-color: var(--token-interactive-hover);
+}
+
+/* ==========================================================================
+   Sidebar and Panel Animations
+   ========================================================================== */
+
+.side-dock-ribbon-tab {
+  transition: all var(--token-transition-normal);
+  transform-origin: center;
+}
+
+.side-dock-ribbon-tab:hover {
+  transform: scale(1.1);
+  box-shadow: var(--token-shadow-md);
+}
+
+.side-dock-ribbon-tab.is-active {
+  transform: scale(1.05);
+  box-shadow: var(--token-shadow-lg);
+}
+
+/* ==========================================================================
+   Status Bar Animations
+   ========================================================================== */
+
+.status-bar-item {
+  transition: all var(--token-transition-fast);
+}
+
+.status-bar-item:hover {
+  transform: translateY(-1px);
+  color: var(--token-text-accent);
+}
+
+/* ==========================================================================
+   Tag Animations
+   ========================================================================== */
+
+.tag {
+  transition: all var(--token-transition-normal);
+  transform-origin: center;
+}
+
+.tag:hover {
+  transform: scale(1.05);
+  box-shadow: var(--token-shadow-md);
+  background-color: var(--token-interactive-accent);
+  color: var(--token-background-50);
+}
+
+/* ==========================================================================
+   Scrollbar Animations
+   ========================================================================== */
+
+::-webkit-scrollbar-thumb {
+  transition: background-color var(--token-transition-fast);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--token-interactive-accent);
+}
+
+/* ==========================================================================
+   Graph View Animations
+   ========================================================================== */
+
+.graph-view.color-circle {
+  transition: all var(--token-transition-normal);
+}
+
+.graph-view.color-circle:hover {
+  transform: scale(1.2);
+  filter: brightness(1.3);
+}
+
+/* ==========================================================================
+   Callout Animations
+   ========================================================================== */
+
+.callout {
+  transition: all var(--token-transition-normal);
+  transform-origin: top left;
+}
+
+.callout:hover {
+  transform: scale(1.01);
+  box-shadow: var(--token-shadow-lg);
+}
+
+.callout-fold {
+  transition: transform var(--token-transition-normal);
+}
+
+.callout.is-collapsed .callout-fold {
+  transform: rotate(-90deg);
+}
+
+/* ==========================================================================
+   Loading and State Animations
+   ========================================================================== */
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.is-loading {
+  animation: pulse 2s infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.is-spinning {
+  animation: spin 1s linear infinite;
+}
+
+/* ==========================================================================
+   Reduced Motion Support
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Note: This interactive theme adds smooth animations and hover effects
+   while respecting user preferences for reduced motion. All animations
+   use hardware acceleration for optimal performance. */

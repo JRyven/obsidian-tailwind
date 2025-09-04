@@ -1,0 +1,60 @@
+/* ==========================================================================
+   Zinc + Amber Color Scheme
+   Cool zinc backgrounds with warm amber text
+   ========================================================================== */
+
+.theme-dark {
+  /* Background Tokens - Zinc scheme */
+  --token-background-50: var(--color-zinc-50);
+  --token-background-100: var(--color-zinc-100);
+  --token-background-200: var(--color-zinc-200);
+  --token-background-300: var(--color-zinc-300);
+  --token-background-400: var(--color-zinc-400);
+  --token-background-500: var(--color-zinc-500);
+  --token-background-600: var(--color-zinc-600);
+  --token-background-700: var(--color-zinc-700);
+  --token-background-800: var(--color-zinc-800);
+  --token-background-900: var(--color-zinc-900);
+  --token-background-950: var(--color-zinc-950);
+
+  /* Text Tokens - Amber scheme */
+  --token-text-50: var(--color-amber-50);
+  --token-text-100: var(--color-amber-100);
+  --token-text-200: var(--color-amber-200);
+  --token-text-300: var(--color-amber-300);
+  --token-text-400: var(--color-amber-400);
+  --token-text-500: var(--color-amber-500);
+  --token-text-600: var(--color-amber-600);
+  --token-text-700: var(--color-amber-700);
+  --token-text-800: var(--color-amber-800);
+  --token-text-900: var(--color-amber-900);
+  --token-text-950: var(--color-amber-950);
+}
+
+.theme-light {
+  /* Background Tokens - Light zinc scheme */
+  --token-background-50: var(--color-zinc-50);
+  --token-background-100: var(--color-zinc-100);
+  --token-background-200: var(--color-zinc-200);
+  --token-background-300: var(--color-zinc-300);
+  --token-background-400: var(--color-zinc-400);
+  --token-background-500: var(--color-zinc-500);
+  --token-background-600: var(--color-zinc-600);
+  --token-background-700: var(--color-zinc-700);
+  --token-background-800: var(--color-zinc-800);
+  --token-background-900: var(--color-zinc-900);
+  --token-background-950: var(--color-zinc-950);
+
+  /* Text Tokens - Darker amber for light mode readability */
+  --token-text-50: var(--color-amber-950);
+  --token-text-100: var(--color-amber-900);
+  --token-text-200: var(--color-amber-800);
+  --token-text-300: var(--color-amber-700);
+  --token-text-400: var(--color-amber-600);
+  --token-text-500: var(--color-amber-500);
+  --token-text-600: var(--color-amber-400);
+  --token-text-700: var(--color-amber-300);
+  --token-text-800: var(--color-amber-200);
+  --token-text-900: var(--color-amber-100);
+  --token-text-950: var(--color-amber-50);
+}
