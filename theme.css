@@ -1,62 +1,26 @@
 /*! tailwindcss v4.1.12 | MIT License | https://tailwindcss.com */
-/* ==========================================================================
-   TailWind Theme for Obsidian
-   A modern, token-based design system for Obsidian using TailwindCSS principles
-   
-   This theme uses a design token system that makes it easy to customize through
-   CSS snippets. The structure is organized as follows:
-   
-   1. Layer declarations - Controls cascade order
-   2. Base color & font definitions - Raw values
-   3. Design token system - Semantic mappings
-   4. Component styles - Organized by UI element type
-   5. Utilities - Helper classes and overrides
-   
-   The theme is designed to work with drop-in CSS snippets like:
-   - theme-gray-purple.css - Alternative color scheme
-   - theme-rounded.css - More rounded styling
-   - theme-interactive.css - Enhanced animations
-   
-   To customize this theme:
-   
-   1. For color schemes: Override --token-background-* and --token-text-* variables
-      Example: Use theme-gray-purple.css to change colors
-      
-   2. For animations: Override --token-transition-* and --token-scale-* variables
-      Example: Use theme-interactive.css for smoother animations
-      
-   3. For box styles: Override --token-radius-* variables
-      Example: Use theme-rounded.css for more rounded corners
-   
-   4. For typography: Override --token-text-* size variables and font families
-   
-   CSS specificity is kept intentionally low to make overriding easy.
-   ========================================================================== */
-
+@layer properties;
 @layer properties;
 @layer theme, base, components, utilities;
-
-/* ==========================================================================
-   Base Color and Font Definitions
-   The foundational color palette and typography settings
-   ========================================================================== */
 @layer theme {
   :root, :host {
-    /* Font definitions */
     --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --default-font-family: var(--font-sans);
-    
-    /* Font family assignments */
     --default-mono-font-family: var(--font-mono);
-    
-    /* Color definitions - Raw color values */
-    /* These are the base colors that can be overridden by theme drop-ins */
+  }
+}
+@layer theme, base, components, utilities;
+@layer theme {
+  :root, :host {
+    --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+      "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+      "Courier New", monospace;
     --color-red-400: oklch(70.4% 0.191 22.216);
     --color-red-600: oklch(57.7% 0.245 27.325);
-    
     --color-amber-50: oklch(98.7% 0.022 95.277);
     --color-amber-100: oklch(96.2% 0.059 95.617);
     --color-amber-200: oklch(92.4% 0.12 95.746);
@@ -68,7 +32,6 @@
     --color-amber-800: oklch(47.3% 0.137 46.201);
     --color-amber-900: oklch(41.4% 0.112 45.904);
     --color-amber-950: oklch(27.9% 0.077 45.635);
-    
     --color-emerald-50: oklch(97.9% 0.021 166.113);
     --color-emerald-100: oklch(95% 0.052 163.051);
     --color-emerald-200: oklch(90.5% 0.093 164.15);
@@ -80,7 +43,6 @@
     --color-emerald-800: oklch(43.2% 0.095 166.913);
     --color-emerald-900: oklch(37.8% 0.077 168.94);
     --color-emerald-950: oklch(26.2% 0.051 172.552);
-    
     --color-purple-50: oklch(97.7% 0.014 308.299);
     --color-purple-100: oklch(94.6% 0.033 307.174);
     --color-purple-200: oklch(90.2% 0.063 306.703);
@@ -92,7 +54,6 @@
     --color-purple-800: oklch(43.8% 0.218 303.724);
     --color-purple-900: oklch(38.1% 0.176 304.987);
     --color-purple-950: oklch(29.1% 0.149 302.717);
-    
     --color-gray-50: oklch(98.5% 0.002 247.839);
     --color-gray-100: oklch(96.7% 0.003 264.542);
     --color-gray-200: oklch(92.8% 0.006 264.531);
@@ -104,7 +65,6 @@
     --color-gray-800: oklch(27.8% 0.033 256.848);
     --color-gray-900: oklch(21% 0.034 264.665);
     --color-gray-950: oklch(13% 0.028 261.692);
-    
     --color-zinc-50: oklch(98.5% 0 0);
     --color-zinc-100: oklch(96.7% 0.001 286.375);
     --color-zinc-200: oklch(92% 0.004 286.32);
@@ -116,7 +76,6 @@
     --color-zinc-800: oklch(27.4% 0.006 286.033);
     --color-zinc-900: oklch(21% 0.006 285.885);
     --color-zinc-950: oklch(14.1% 0.005 285.823);
-    
     --color-stone-50: oklch(98.5% 0.001 106.423);
     --color-stone-100: oklch(97% 0.001 106.424);
     --color-stone-200: oklch(92.3% 0.003 48.717);
@@ -128,8 +87,6 @@
     --color-stone-800: oklch(26.8% 0.007 34.298);
     --color-stone-900: oklch(21.6% 0.006 56.043);
     --color-stone-950: oklch(14.7% 0.004 49.25);
-    
-    /* Typography scale */
     --text-xs: 0.75rem;
     --text-sm: 0.875rem;
     --text-base: 1rem;
@@ -141,6 +98,8 @@
     --text-5xl: 3rem;
     --text-6xl: 3.75rem;
     --text-7xl: 4.5rem;
+    --default-font-family: var(--font-sans);
+    --default-mono-font-family: var(--font-mono);
   }
 }
 @layer base {
@@ -222,7 +181,7 @@
   }
   img, svg, video, canvas, audio, iframe, embed, object {
     display: block;
-    /* Removed vertical-align since it has no effect with display: block */
+    vertical-align: middle;
   }
   img, video {
     max-width: 100%;
@@ -310,14 +269,7 @@
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
 }
-
-/* ==========================================================================
-   Design Token System
-   Semantic tokens that map raw values to functional design tokens
-   These can be overridden by theme drop-ins
-   ========================================================================== */
 :root {
-  /* Background color tokens - Using Stone colors by default */
   --token-background-50: var(--color-stone-50);
   --token-background-100: var(--color-stone-100);
   --token-background-200: var(--color-stone-200);
@@ -329,8 +281,6 @@
   --token-background-800: var(--color-stone-800);
   --token-background-900: var(--color-stone-900);
   --token-background-950: var(--color-stone-950);
-  
-  /* Text color tokens - Using Amber colors by default */
   --token-text-50: var(--color-amber-50);
   --token-text-100: var(--color-amber-100);
   --token-text-200: var(--color-amber-200);
@@ -342,8 +292,6 @@
   --token-text-800: var(--color-amber-800);
   --token-text-900: var(--color-amber-900);
   --token-text-950: var(--color-amber-950);
-  
-  /* Spacing tokens */
   --token-space-0: 0;
   --token-space-px: 1px;
   --token-space-0-5: 0.125rem;
@@ -367,29 +315,23 @@
   --token-space-20: 5rem;
   --token-space-24: 6rem;
   --token-space-32: 8rem;
-  
-  /* Typography size tokens - match to base font sizes */
-  --token-text-xs: var(--text-xs);
-  --token-text-sm: var(--text-sm);
-  --token-text-base: var(--text-base);
-  --token-text-lg: var(--text-lg);
-  --token-text-xl: var(--text-xl);
-  --token-text-2xl: var(--text-2xl);
-  --token-text-3xl: var(--text-3xl);
-  --token-text-4xl: var(--text-4xl);
-  --token-text-5xl: var(--text-5xl);
-  --token-text-6xl: var(--text-6xl);
-  --token-text-7xl: var(--text-7xl);
-  
-  /* Line height tokens */
+  --token-text-xs: 0.75rem;
+  --token-text-sm: 0.875rem;
+  --token-text-base: 1rem;
+  --token-text-lg: 1.125rem;
+  --token-text-xl: 1.25rem;
+  --token-text-2xl: 1.5rem;
+  --token-text-3xl: 1.875rem;
+  --token-text-4xl: 2.25rem;
+  --token-text-5xl: 3rem;
+  --token-text-6xl: 3.75rem;
+  --token-text-7xl: 4.5rem;
   --token-leading-none: 1;
   --token-leading-tight: 1.25;
   --token-leading-snug: 1.375;
   --token-leading-normal: 1.5;
   --token-leading-relaxed: 1.625;
   --token-leading-loose: 2;
-  
-  /* Border radius tokens */
   --token-radius-none: 0;
   --token-radius-sm: 0.125rem;
   --token-radius: 0.25rem;
@@ -399,18 +341,12 @@
   --token-radius-2xl: 1rem;
   --token-radius-3xl: 1.5rem;
   --token-radius-full: 9999px;
-  
-  /* Shadow tokens */
   --token-shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --token-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   --token-shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --token-shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   --token-shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
   --token-shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
-  
-  /* Semantic UI tokens - Dark mode defaults
-     These tokens map design tokens to functional UI elements
-     Override these in drop-in snippets to change theme colors */
   --token-bg-primary: var(--token-background-800);
   --token-bg-primary-alt: var(--token-background-700);
   --token-bg-secondary: var(--token-background-900);
@@ -421,8 +357,6 @@
   @supports (color: color-mix(in lab, red, red)) {
     --token-bg-modifier-hover: color-mix(in srgb, var(--token-text-500) 10%, transparent);
   }
-  
-  /* Text semantic tokens */
   --token-text-normal: var(--token-text-100);
   --token-text-muted: var(--token-text-200);
   --token-text-faint: var(--token-text-300);
@@ -431,60 +365,46 @@
   --token-text-error: var(--color-red-400);
   --token-text-success: var(--color-emerald-400);
   --token-text-warning: var(--color-amber-400);
-  
-  /* Interactive element tokens */
   --token-interactive-normal: var(--token-background-700);
   --token-interactive-hover: var(--token-background-600);
   --token-interactive-accent: var(--token-text-600);
   --token-interactive-accent-hover: var(--token-text-500);
-  /* Header tokens - H1 */
   --token-header-h1-size: var(--token-text-3xl);
   --token-header-h1-leading: var(--token-leading-tight);
   --token-header-h1-bg: var(--token-background-700);
   --token-header-h1-color: var(--token-text-100);
   --token-header-h1-border: var(--token-text-500);
   --token-header-h1-padding-y: var(--token-space-4);
-  
-  /* Header tokens - H2 */
   --token-header-h2-size: var(--token-text-2xl);
   --token-header-h2-leading: var(--token-leading-tight);
   --token-header-h2-bg: var(--token-background-700);
   --token-header-h2-color: var(--token-text-200);
   --token-header-h2-border: var(--token-text-600);
   --token-header-h2-padding-y: var(--token-space-3);
-  
-  /* Header tokens - H3 */
   --token-header-h3-size: var(--token-text-xl);
   --token-header-h3-leading: var(--token-leading-snug);
   --token-header-h3-bg: var(--token-background-600);
   --token-header-h3-color: var(--token-text-300);
   --token-header-h3-border: var(--token-text-700);
   --token-header-h3-padding-y: var(--token-space-2);
-  
-  /* Header tokens - H4 */
   --token-header-h4-size: var(--token-text-lg);
   --token-header-h4-leading: var(--token-leading-snug);
   --token-header-h4-bg: var(--token-background-600);
   --token-header-h4-color: var(--token-text-400);
   --token-header-h4-border: var(--token-text-800);
   --token-header-h4-padding-y: var(--token-space-1);
-  
-  /* Header tokens - H5 */
   --token-header-h5-size: var(--token-text-base);
   --token-header-h5-leading: var(--token-leading-normal);
   --token-header-h5-bg: var(--token-background-600);
   --token-header-h5-color: var(--token-text-300);
   --token-header-h5-border: var(--token-text-800);
   --token-header-h5-padding-y: var(--token-space-1);
-  
-  /* Header tokens - H6 (Fixed from using h5 values) */
   --token-header-h6-size: var(--token-text-sm);
   --token-header-h6-leading: var(--token-leading-normal);
-  --token-header-h6-bg: var(--token-background-600);     /* Fixed from h5 */
-  --token-header-h6-color: var(--token-text-300);        /* Fixed from h5 */
-  --token-header-h6-border: var(--token-text-800);       /* Fixed from h5 */
+  --token-header-h6-bg: var(--token-background-600);
+  --token-header-h6-color: var(--token-text-300);
+  --token-header-h6-border: var(--token-text-800);
   --token-header-h6-padding-y: var(--token-space-1);
-  /* Button tokens */
   --token-button-bg: var(--token-text-600);
   --token-button-color: var(--token-background-50);
   --token-button-bg-hover: var(--token-text-500);
@@ -492,8 +412,6 @@
   --token-button-padding-x: var(--token-space-4);
   --token-button-padding-y: var(--token-space-2);
   --token-button-radius: var(--token-radius-md);
-  
-  /* Tab tokens */
   --token-tab-bg: var(--token-bg-primary);
   --token-tab-bg-active: var(--token-bg-primary-alt);
   --token-tab-color: var(--token-text-muted);
@@ -501,15 +419,11 @@
   --token-tab-border: var(--token-bg-modifier-border);
   --token-tab-padding-x: var(--token-space-3);
   --token-tab-padding-y: var(--token-space-2);
-  
-  /* Sidebar tokens */
   --token-sidebar-bg: var(--token-bg-secondary);
   --token-sidebar-border: var(--token-bg-modifier-border);
   --token-sidebar-item-padding-x: var(--token-space-2);
   --token-sidebar-item-padding-y: var(--token-space-1);
   --token-sidebar-item-radius: var(--token-radius);
-  
-  /* Animation tokens */
   --token-transition-fast: 150ms ease;
   --token-transition-normal: 250ms ease;
   --token-transition-slow: 350ms ease;
@@ -591,24 +505,6 @@ body {
   --background-modifier-hover: var(--token-bg-modifier-hover);
   --background-modifier-box-shadow: var(--token-shadow-lg);
 }
-
-/* ==========================================================================
-   Header Styles
-   Common styles for all header levels with specific overrides
-   ========================================================================== */
-
-/* Common header styles - applies to all headers */
-.cm-active[class*="HyperMD-header"], 
-.markdown-rendered div > :is(h1, h2, h3, h4, h5, h6) {
-  padding-left: var(--token-space-6);
-  padding-right: var(--token-space-4);
-  border-radius: var(--token-radius-md);
-  border-left-width: var(--token-space-1);
-  border-left-style: solid;
-  margin: var(--token-space-4) 0;
-}
-
-/* Specific styles for each header level - H1 */
 .cm-active.HyperMD-header-1, .markdown-rendered div > h1 {
   font-size: var(--token-header-h1-size);
   line-height: var(--token-header-h1-leading);
@@ -617,9 +513,13 @@ body {
   border-left-color: var(--token-header-h1-border);
   padding-top: var(--token-header-h1-padding-y);
   padding-bottom: var(--token-header-h1-padding-y);
+  padding-left: var(--token-space-6);
+  padding-right: var(--token-space-4);
+  border-radius: var(--token-radius-md);
+  border-left-width: var(--token-space-1);
+  border-left-style: solid;
+  margin: var(--token-space-4) 0;
 }
-
-/* H2 */
 .cm-active.HyperMD-header-2, .markdown-rendered div > h2 {
   font-size: var(--token-header-h2-size);
   line-height: var(--token-header-h2-leading);
@@ -628,9 +528,13 @@ body {
   border-left-color: var(--token-header-h2-border);
   padding-top: var(--token-header-h2-padding-y);
   padding-bottom: var(--token-header-h2-padding-y);
+  padding-left: var(--token-space-6);
+  padding-right: var(--token-space-4);
+  border-radius: var(--token-radius-md);
+  border-left-width: var(--token-space-1);
+  border-left-style: solid;
+  margin: var(--token-space-4) 0;
 }
-
-/* H3 */
 .cm-active.HyperMD-header-3, .markdown-rendered div > h3 {
   font-size: var(--token-header-h3-size);
   line-height: var(--token-header-h3-leading);
@@ -639,9 +543,13 @@ body {
   border-left-color: var(--token-header-h3-border);
   padding-top: var(--token-header-h3-padding-y);
   padding-bottom: var(--token-header-h3-padding-y);
+  padding-left: var(--token-space-6);
+  padding-right: var(--token-space-4);
+  border-radius: var(--token-radius-md);
+  border-left-width: var(--token-space-1);
+  border-left-style: solid;
+  margin: var(--token-space-4) 0;
 }
-
-/* H4 */
 .cm-active.HyperMD-header-4, .markdown-rendered div > h4 {
   font-size: var(--token-header-h4-size);
   line-height: var(--token-header-h4-leading);
@@ -650,9 +558,13 @@ body {
   border-left-color: var(--token-header-h4-border);
   padding-top: var(--token-header-h4-padding-y);
   padding-bottom: var(--token-header-h4-padding-y);
+  padding-left: var(--token-space-6);
+  padding-right: var(--token-space-4);
+  border-radius: var(--token-radius-md);
+  border-left-width: var(--token-space-1);
+  border-left-style: solid;
+  margin: var(--token-space-4) 0;
 }
-
-/* H5 */
 .cm-active.HyperMD-header-5, .markdown-rendered div > h5 {
   font-size: var(--token-header-h5-size);
   line-height: var(--token-header-h5-leading);
@@ -661,9 +573,13 @@ body {
   border-left-color: var(--token-header-h5-border);
   padding-top: var(--token-header-h5-padding-y);
   padding-bottom: var(--token-header-h5-padding-y);
+  padding-left: var(--token-space-6);
+  padding-right: var(--token-space-4);
+  border-radius: var(--token-radius-md);
+  border-left-width: var(--token-space-1);
+  border-left-style: solid;
+  margin: var(--token-space-4) 0;
 }
-
-/* H6 - Now using correct h6 variables */
 .cm-active.HyperMD-header-6, .markdown-rendered div > h6 {
   font-size: var(--token-header-h6-size);
   line-height: var(--token-header-h6-leading);
@@ -672,11 +588,13 @@ body {
   border-left-color: var(--token-header-h6-border);
   padding-top: var(--token-header-h6-padding-y);
   padding-bottom: var(--token-header-h6-padding-y);
+  padding-left: var(--token-space-6);
+  padding-right: var(--token-space-4);
+  border-radius: var(--token-radius-md);
+  border-left-width: var(--token-space-1);
+  border-left-style: solid;
+  margin: var(--token-space-4) 0;
 }
-
-/* ==========================================================================
-   Button Styles
-   ========================================================================== */
 button {
   background-color: var(--token-button-bg);
   color: var(--token-button-color);
@@ -686,15 +604,10 @@ button {
   cursor: pointer;
   transition: all var(--token-transition-fast);
 }
-
 button:hover {
   background-color: var(--token-button-bg-hover);
   color: var(--token-button-color-hover);
 }
-
-/* ==========================================================================
-   Tab Navigation Styles
-   ========================================================================== */
 .workspace-tab-header {
   background-color: var(--token-tab-bg);
   color: var(--token-tab-color);
@@ -702,49 +615,26 @@ button:hover {
   padding: var(--token-tab-padding-y) var(--token-tab-padding-x);
   transition: all var(--token-transition-fast);
 }
-
 .workspace-tab-header.is-active {
   background-color: var(--token-tab-bg-active);
   color: var(--token-tab-color-active);
 }
-
-.workspace-tab-header::before, 
-.workspace-tab-header::after {
+.workspace-tab-header::before, .workspace-tab-header::after {
   display: none;
 }
-
-/* Pinned tabs get a max width to avoid crowding */
-.workspace-tab-header:has(.mod-pinned) {
-  max-width: 90px !important;
-}
-
-/* ==========================================================================
-   File Explorer & Navigation Styles
-   ========================================================================== */
-.nav-folder, 
-.nav-file {
+.nav-folder, .nav-file {
   padding: var(--token-sidebar-item-padding-y) var(--token-sidebar-item-padding-x);
   border-radius: var(--token-sidebar-item-radius);
   transition: all var(--token-transition-fast);
 }
-
-.nav-folder:hover, 
-.nav-file:hover {
+.nav-folder:hover, .nav-file:hover {
   background-color: var(--token-interactive-hover);
 }
-
-/* ==========================================================================
-   Status Bar Styles
-   ========================================================================== */
 .status-bar {
   background-color: var(--token-bg-secondary);
   border-top: 1px solid var(--token-bg-modifier-border);
   padding: var(--token-space-1) var(--token-space-2);
 }
-
-/* ==========================================================================
-   Editor Styles
-   ========================================================================== */
 .inline-title {
   font-size: var(--token-header-h1-size);
   line-height: var(--token-header-h1-leading);
@@ -752,30 +642,149 @@ button:hover {
   font-weight: 700;
   margin-bottom: var(--token-space-5);
 }
-
-/* ==========================================================================
-   Code Block Styles
-   ========================================================================== */
 pre, code {
   background-color: var(--token-bg-primary-alt);
   border: 1px solid var(--token-bg-modifier-border);
   border-radius: var(--token-radius);
   padding: var(--token-space-1);
 }
-
 pre {
   padding: var(--token-space-4);
   margin: var(--token-space-2) 0;
 }
-
-/* ==========================================================================
-   Blockquote Styles
-   ========================================================================== */
 blockquote {
   border-left: var(--token-space-1) solid var(--token-text-accent);
   padding-left: var(--token-space-4);
   margin: var(--token-space-4) 0;
   color: var(--token-text-muted);
+}
+.cm-active[class*="HyperMD-header"], .markdown-rendered div > :is(h1, h2, h3, h4, h5, h6) {
+  padding-left: var(--token-space-6);
+  padding-right: var(--token-space-4);
+  border-radius: var(--token-radius-md);
+  border-left-width: var(--token-space-1);
+  border-left-style: solid;
+  margin: var(--token-space-4) 0;
+}
+.cm-active.HyperMD-header-1, .markdown-rendered div > h1 {
+  font-size: var(--token-header-h1-size);
+  line-height: var(--token-header-h1-leading);
+  background-color: var(--token-header-h1-bg);
+  color: var(--token-header-h1-color);
+  border-left-color: var(--token-header-h1-border);
+  padding-top: var(--token-header-h1-padding-y);
+  padding-bottom: var(--token-header-h1-padding-y);
+}
+.cm-active.HyperMD-header-2, .markdown-rendered div > h2 {
+  font-size: var(--token-header-h2-size);
+  line-height: var(--token-header-h2-leading);
+  background-color: var(--token-header-h2-bg);
+  color: var(--token-header-h2-color);
+  border-left-color: var(--token-header-h2-border);
+  padding-top: var(--token-header-h2-padding-y);
+  padding-bottom: var(--token-header-h2-padding-y);
+}
+.cm-active.HyperMD-header-3, .markdown-rendered div > h3 {
+  font-size: var(--token-header-h3-size);
+  line-height: var(--token-header-h3-leading);
+  background-color: var(--token-header-h3-bg);
+  color: var(--token-header-h3-color);
+  border-left-color: var(--token-header-h3-border);
+  padding-top: var(--token-header-h3-padding-y);
+  padding-bottom: var(--token-header-h3-padding-y);
+}
+.cm-active.HyperMD-header-4, .markdown-rendered div > h4 {
+  font-size: var(--token-header-h4-size);
+  line-height: var(--token-header-h4-leading);
+  background-color: var(--token-header-h4-bg);
+  color: var(--token-header-h4-color);
+  border-left-color: var(--token-header-h4-border);
+  padding-top: var(--token-header-h4-padding-y);
+  padding-bottom: var(--token-header-h4-padding-y);
+}
+.cm-active.HyperMD-header-5, .markdown-rendered div > h5 {
+  font-size: var(--token-header-h5-size);
+  line-height: var(--token-header-h5-leading);
+  background-color: var(--token-header-h5-bg);
+  color: var(--token-header-h5-color);
+  border-left-color: var(--token-header-h5-border);
+  padding-top: var(--token-header-h5-padding-y);
+  padding-bottom: var(--token-header-h5-padding-y);
+}
+.cm-active.HyperMD-header-6, .markdown-rendered div > h6 {
+  font-size: var(--token-header-h6-size);
+  line-height: var(--token-header-h6-leading);
+  background-color: var(--token-header-h6-bg);
+  color: var(--token-header-h6-color);
+  border-left-color: var(--token-header-h6-border);
+  padding-top: var(--token-header-h6-padding-y);
+  padding-bottom: var(--token-header-h6-padding-y);
+}
+button {
+  background-color: var(--token-button-bg);
+  color: var(--token-button-color);
+  padding: var(--token-button-padding-y) var(--token-button-padding-x);
+  border-radius: var(--token-button-radius);
+  border: none;
+  cursor: pointer;
+  transition: all var(--token-transition-fast);
+}
+button:hover {
+  background-color: var(--token-button-bg-hover);
+  color: var(--token-button-color-hover);
+}
+.workspace-tab-header {
+  background-color: var(--token-tab-bg);
+  color: var(--token-tab-color);
+  border-bottom: 1px solid var(--token-tab-border);
+  padding: var(--token-tab-padding-y) var(--token-tab-padding-x);
+  transition: all var(--token-transition-fast);
+}
+.workspace-tab-header.is-active {
+  background-color: var(--token-tab-bg-active);
+  color: var(--token-tab-color-active);
+}
+.workspace-tab-header::before, .workspace-tab-header::after {
+  display: none;
+}
+.nav-folder, .nav-file {
+  padding: var(--token-sidebar-item-padding-y) var(--token-sidebar-item-padding-x);
+  border-radius: var(--token-sidebar-item-radius);
+  transition: all var(--token-transition-fast);
+}
+.nav-folder:hover, .nav-file:hover {
+  background-color: var(--token-interactive-hover);
+}
+.status-bar {
+  background-color: var(--token-bg-secondary);
+  border-top: 1px solid var(--token-bg-modifier-border);
+  padding: var(--token-space-1) var(--token-space-2);
+}
+.inline-title {
+  font-size: var(--token-header-h1-size);
+  line-height: var(--token-header-h1-leading);
+  color: var(--token-text-accent);
+  font-weight: 700;
+  margin-bottom: var(--token-space-5);
+}
+pre, code {
+  background-color: var(--token-bg-primary-alt);
+  border: 1px solid var(--token-bg-modifier-border);
+  border-radius: var(--token-radius);
+  padding: var(--token-space-1);
+}
+pre {
+  padding: var(--token-space-4);
+  margin: var(--token-space-2) 0;
+}
+blockquote {
+  border-left: var(--token-space-1) solid var(--token-text-accent);
+  padding-left: var(--token-space-4);
+  margin: var(--token-space-4) 0;
+  color: var(--token-text-muted);
+}
+.workspace-tab-header:has(.mod-pinned) {
+  max-width: 90px !important;
 }
 @property --tw-shadow {
   syntax: "*";
