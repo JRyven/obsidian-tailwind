@@ -48,12 +48,33 @@ The TailWind theme includes comprehensive support for both light and dark modes:
 ## Architecture
 
 The theme uses semantic tokens that map to Tailwind colors:
-- **Background Tokens**: `--background-50` to `--background-950`
-- **Text Tokens**: `--text-100` to `--text-900`
-- **Spacing Scale**: `--space-0` to `--space-32`
-- **Typography Scale**: `--text-xs` to `--text-7xl`
+- **Background Tokens**: `--token-background-50` to `--token-background-950`
+- **Text Tokens**: `--token-text-100` to `--token-text-900`
+- **Spacing Scale**: `--token-space-0` to `--token-space-32`
+- **Typography Scale**: `--token-text-xs` to `--token-text-7xl`
 
 This allows theme-wide changes by updating semantic tokens while preserving access to the complete Tailwind color system.
+
+### File Structure
+
+TailWind Theme uses a modular structure for easier maintenance and customization:
+
+- **theme-tokens.css**: Defines the design system foundation with colors, typography, spacing, and semantic mappings
+- **theme-components.css**: Applies the token system to Obsidian UI elements and components
+- **theme-utilities.css**: Contains utility classes for fine-tuning and customization
+- **drop-ins/**: Ready-to-use theme enhancements and variations
+
+### Drop-in Theme Variations
+
+The theme includes ready-to-use variations in the `drop-ins/` folder:
+
+1. **Color Schemes**:
+   - `theme-stone-emerald.css`: Warm stone backgrounds with fresh emerald accents
+   - `theme-zinc-amber.css`: Cool zinc backgrounds with warm amber accents
+
+2. **UI Enhancements**:
+   - `theme-rounded.css`: Adds more rounded corners to UI elements
+   - `theme-interactive.css`: Enhances hover effects and animations
 
 ## Color Configuration Guide
 
@@ -90,36 +111,56 @@ The theme uses a systematic approach with semantic tokens:
 - `teal` - Calming and modern
 - `orange` - Energetic and friendly
 
-### Creating Custom Color Schemes
+### Customizing Your Theme
+
+You have several ways to customize the TailWind theme:
+
+#### 1. Using Drop-in Files (Easiest)
+
+Simply copy any of the drop-in CSS files from the `drop-ins/` folder to your `.obsidian/snippets/` folder and enable them in Obsidian's settings.
+
+For example, to use the Stone + Emerald color scheme:
+
+1. Copy `drop-ins/theme-stone-emerald.css` to `.obsidian/snippets/`
+2. Enable it in Settings → Appearance → CSS snippets
+
+#### 2. Creating Custom Color Schemes
 
 You can create your own color combinations by making a CSS snippet in `.obsidian/snippets/`:
 
-#### Example: Stone Background + Emerald Text
+##### Example: Stone Background + Emerald Text
 
 ```css
 /* Custom color scheme: Stone + Emerald */
 :root {
   /* Update semantic tokens to use stone backgrounds */
-  --background-50: var(--stone-50);
-  --background-100: var(--stone-100);
-  --background-200: var(--stone-200);
-  --background-600: var(--stone-600);
-  --background-700: var(--stone-700);
-  --background-800: var(--stone-800);
-  --background-900: var(--stone-900);
-  --background-950: var(--stone-950);
+  --token-background-50: var(--color-stone-50);
+  --token-background-100: var(--color-stone-100);
+  --token-background-200: var(--color-stone-200);
+  --token-background-600: var(--color-stone-600);
+  --token-background-700: var(--color-stone-700);
+  --token-background-800: var(--color-stone-800);
+  --token-background-900: var(--color-stone-900);
+  --token-background-950: var(--color-stone-950);
 
   /* Update semantic tokens to use emerald text */
-  --text-100: var(--emerald-100);
-  --text-200: var(--emerald-200);
-  --text-300: var(--emerald-300);
-  --text-400: var(--emerald-400);
-  --text-500: var(--emerald-500);
-  --text-600: var(--emerald-600);
-  --text-700: var(--emerald-700);
-  --text-900: var(--emerald-900);
+  --token-text-100: var(--color-emerald-100);
+  --token-text-200: var(--color-emerald-200);
+  --token-text-300: var(--color-emerald-300);
+  --token-text-400: var(--color-emerald-400);
+  --token-text-500: var(--color-emerald-500);
+  --token-text-600: var(--color-emerald-600);
+  --token-text-700: var(--color-emerald-700);
+  --token-text-900: var(--color-emerald-900);
 }
 ```
+
+#### 3. UI Customizations
+
+To customize the UI, you can combine color schemes with UI enhancements:
+
+- **Rounded UI**: Use `theme-rounded.css` for softer, more rounded corners
+- **Interactive Effects**: Use `theme-interactive.css` for enhanced hover effects
 
 ### Color Mapping Reference
 
@@ -144,15 +185,29 @@ You can create your own color combinations by making a CSS snippet in `.obsidian
 ## Installation & Usage
 
 1. **Activate Theme**: Settings → Appearance → Select "TailWind"
-2. **Customize Colors**: Create CSS snippets to override semantic tokens
+2. **Customize Colors**: Use drop-in files or create CSS snippets to override semantic tokens
 3. **Preview Colors**: All colors follow the official Tailwind CSS color palette. Preview at: https://tailwindcss.com/docs/colors
+
+### Advanced Customization
+
+For advanced users who want more control:
+
+1. **Component Styling**: Create a CSS snippet targeting specific Obsidian components
+2. **Token Overrides**: Customize token values in your snippet to change colors, spacing, etc.
+3. **Mix and Match**: Combine multiple drop-ins for a unique look
 
 ## Key Variables for Customization
 
-- **Colors**: `--background-primary`, `--text-normal`, `--text-accent`
-- **Spacing**: `--space-1` through `--space-32`
-- **Typography**: `--text-xs` through `--text-7xl`
-- **Heading Padding**: `--heading-padding-h1` through `--heading-padding-h6`
+### Main Token Categories
+- **Colors**: `--token-bg-primary`, `--token-text-normal`, `--token-interactive-accent`
+- **Spacing**: `--token-space-1` through `--token-space-32`
+- **Typography**: `--token-text-xs` through `--token-text-7xl`
+- **Radius**: `--token-radius-none` through `--token-radius-full`
+
+### Component-Specific Tokens
+- **Headers**: `--token-header-h1-size`, `--token-header-h1-bg`, etc.
+- **UI Elements**: `--token-sidebar-item-padding-x`, `--token-tab-padding-y`, etc.
+- **Interactive**: `--token-interactive-hover`, `--token-button-bg-hover`, etc.
 
 Created by bears • Inspired by Tailwind CSS
 

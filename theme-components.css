@@ -83,6 +83,7 @@
 /* ==========================================================================
    Button Styles
    ========================================================================== */
+
 button {
   background-color: var(--token-button-bg);
   color: var(--token-button-color);
@@ -101,6 +102,7 @@ button:hover {
 /* ==========================================================================
    Tab Navigation Styles
    ========================================================================== */
+
 .workspace-tab-header {
   background-color: var(--token-tab-bg);
   color: var(--token-tab-color);
@@ -122,6 +124,7 @@ button:hover {
 /* ==========================================================================
    File Explorer & Navigation Styles
    ========================================================================== */
+
 .nav-folder, 
 .nav-file {
   padding: var(--token-sidebar-item-padding-y) var(--token-sidebar-item-padding-x);
@@ -131,12 +134,25 @@ button:hover {
 
 .nav-folder:hover, 
 .nav-file:hover {
-  background-color: var(--token-interactive-hover);
+  background-color: transparent;
 }
+
+.nav-folder:active, 
+.nav-file:active {
+  background-color: var(--token-bg-primary);
+}
+
+/* ==========================================================================
+   Obsidian note elements
+   ========================================================================== */
+
+.mod-header {}
+
 
 /* ==========================================================================
    Status Bar Styles
    ========================================================================== */
+
 .status-bar {
   background-color: var(--token-bg-secondary);
   border-top: 1px solid var(--token-bg-modifier-border);
@@ -146,6 +162,7 @@ button:hover {
 /* ==========================================================================
    Editor Styles
    ========================================================================== */
+
 .inline-title {
   font-size: var(--token-header-h1-size);
   line-height: var(--token-header-h1-leading);
@@ -157,6 +174,7 @@ button:hover {
 /* ==========================================================================
    Code Block Styles
    ========================================================================== */
+
 pre, code {
   background-color: var(--token-bg-primary-alt);
   border: 1px solid var(--token-bg-modifier-border);
@@ -172,6 +190,7 @@ pre {
 /* ==========================================================================
    Blockquote Styles
    ========================================================================== */
+
 blockquote {
   border-left: var(--token-space-1) solid var(--token-text-accent);
   padding-left: var(--token-space-4);

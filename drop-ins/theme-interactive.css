@@ -216,7 +216,6 @@ textarea:focus,
 
 .suggestion-item:hover,
 .menu-item:hover {
-  transform:  scale(1.01);
   background-color: var(--token-interactive-hover);
 }
 
@@ -303,7 +302,6 @@ textarea:focus,
 }
 
 .callout:hover {
-  transform: scale(1.01);
   box-shadow: var(--token-shadow-lg);
 }
 

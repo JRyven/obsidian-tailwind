@@ -128,7 +128,7 @@
 
   /* Interactive semantic tokens */
   --token-interactive-normal: var(--token-background-700);
-  --token-interactive-hover: var(--token-background-600);
+  --token-interactive-hover: var(--token-background-800);
   --token-interactive-accent: var(--token-text-600);
   --token-interactive-accent-hover: var(--token-text-500);
 
@@ -451,19 +451,6 @@ button:hover {
 
 .workspace-tab-header::before, .workspace-tab-header::after {
   display: none;
-}
-
-/* Sidebar using token system */
-.nav-folder,
-.nav-file {
-  padding: var(--token-sidebar-item-padding-y) var(--token-sidebar-item-padding-x);
-  border-radius: var(--token-sidebar-item-radius);
-  transition: all var(--token-transition-fast);
-}
-
-.nav-folder:hover,
-.nav-file:hover {
-  background-color: var(--token-interactive-hover);
 }
 
 /* Status bar using token system */

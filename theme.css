@@ -87,17 +87,6 @@
     --color-stone-800: oklch(26.8% 0.007 34.298);
     --color-stone-900: oklch(21.6% 0.006 56.043);
     --color-stone-950: oklch(14.7% 0.004 49.25);
-    --text-xs: 0.75rem;
-    --text-sm: 0.875rem;
-    --text-base: 1rem;
-    --text-lg: 1.125rem;
-    --text-xl: 1.25rem;
-    --text-2xl: 1.5rem;
-    --text-3xl: 1.875rem;
-    --text-4xl: 2.25rem;
-    --text-5xl: 3rem;
-    --text-6xl: 3.75rem;
-    --text-7xl: 4.5rem;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
   }
@@ -264,6 +253,9 @@
   }
 }
 @layer utilities {
+  .rounded {
+    border-radius: 0.25rem;
+  }
   .shadow {
     --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 1px 2px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
@@ -366,7 +358,7 @@
   --token-text-success: var(--color-emerald-400);
   --token-text-warning: var(--color-amber-400);
   --token-interactive-normal: var(--token-background-700);
-  --token-interactive-hover: var(--token-background-600);
+  --token-interactive-hover: var(--token-background-800);
   --token-interactive-accent: var(--token-text-600);
   --token-interactive-accent-hover: var(--token-text-500);
   --token-header-h1-size: var(--token-text-3xl);
@@ -622,14 +614,6 @@ button:hover {
 .workspace-tab-header::before, .workspace-tab-header::after {
   display: none;
 }
-.nav-folder, .nav-file {
-  padding: var(--token-sidebar-item-padding-y) var(--token-sidebar-item-padding-x);
-  border-radius: var(--token-sidebar-item-radius);
-  transition: all var(--token-transition-fast);
-}
-.nav-folder:hover, .nav-file:hover {
-  background-color: var(--token-interactive-hover);
-}
 .status-bar {
   background-color: var(--token-bg-secondary);
   border-top: 1px solid var(--token-bg-modifier-border);
@@ -753,7 +737,10 @@ button:hover {
   transition: all var(--token-transition-fast);
 }
 .nav-folder:hover, .nav-file:hover {
-  background-color: var(--token-interactive-hover);
+  background-color: transparent;
+}
+.nav-folder:active, .nav-file:active {
+  background-color: var(--token-bg-primary);
 }
 .status-bar {
   background-color: var(--token-bg-secondary);
