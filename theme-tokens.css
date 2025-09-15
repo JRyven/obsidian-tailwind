@@ -8,31 +8,31 @@
      Semantic Color Token Mappings - Default: neutral + lime
      ========================================================================== */
   
-  /* Background Color Tokens - Default: neutral scheme */
-  --token-background-50: var(--color-neutral-50);
-  --token-background-100: var(--color-neutral-100);
-  --token-background-200: var(--color-neutral-200);
-  --token-background-300: var(--color-neutral-300);
-  --token-background-400: var(--color-neutral-400);
-  --token-background-500: var(--color-neutral-500);
-  --token-background-600: var(--color-neutral-600);
-  --token-background-700: var(--color-neutral-700);
-  --token-background-800: var(--color-neutral-800);
-  --token-background-900: var(--color-neutral-900);
-  --token-background-950: var(--color-neutral-950);
+  /* Background Color Tokens */
+  --token-background-50: var(--color-stone-50);
+  --token-background-100: var(--color-stone-100);
+  --token-background-200: var(--color-stone-200);
+  --token-background-300: var(--color-stone-300);
+  --token-background-400: var(--color-stone-400);
+  --token-background-500: var(--color-stone-500);
+  --token-background-600: var(--color-stone-600);
+  --token-background-700: var(--color-stone-700);
+  --token-background-800: var(--color-stone-800);
+  --token-background-900: var(--color-stone-900);
+  --token-background-950: var(--color-stone-950);
 
-  /* Text Color Tokens - Default: lime scheme */
-  --token-text-50: var(--color-lime-50);
-  --token-text-100: var(--color-lime-100);
-  --token-text-200: var(--color-lime-200);
-  --token-text-300: var(--color-lime-300);
-  --token-text-400: var(--color-lime-400);
-  --token-text-500: var(--color-lime-500);
-  --token-text-600: var(--color-lime-600);
-  --token-text-700: var(--color-lime-700);
-  --token-text-800: var(--color-lime-800);
-  --token-text-900: var(--color-lime-900);
-  --token-text-950: var(--color-lime-950);
+  /* Text Color Tokens */
+  --token-text-50: var(--color-amber-50);
+  --token-text-100: var(--color-amber-100);
+  --token-text-200: var(--color-amber-200);
+  --token-text-300: var(--color-amber-300);
+  --token-text-400: var(--color-amber-400);
+  --token-text-500: var(--color-amber-500);
+  --token-text-600: var(--color-amber-600);
+  --token-text-700: var(--color-amber-700);
+  --token-text-800: var(--color-amber-800);
+  --token-text-900: var(--color-amber-900);
+  --token-text-950: var(--color-amber-950);
 
   /* ==========================================================================
      Design System Tokens
@@ -163,16 +163,16 @@
 
   --token-header-h5-size: var(--token-text-base);
   --token-header-h5-leading: var(--token-leading-normal);
-  --token-header-h5-bg: var(--token-background-300);
-  --token-header-h5-color: var(--token-text-700);
+  --token-header-h5-bg: var(--token-background-600);
+  --token-header-h5-color: var(--token-text-300);
   --token-header-h5-border: var(--token-text-800);
   --token-header-h5-padding-y: var(--token-space-1);
 
   --token-header-h6-size: var(--token-text-sm);
   --token-header-h6-leading: var(--token-leading-normal);
-  --token-header-h6-bg: var(--token-background-200);
-  --token-header-h6-color: var(--token-text-600);
-  --token-header-h6-border: var(--token-text-900);
+  --token-header-h6-bg: var(--token-background-600);
+  --token-header-h6-color: var(--token-text-300);
+  --token-header-h6-border: var(--token-text-800);
   --token-header-h6-padding-y: var(--token-space-1);
 
   /* Button semantic tokens */
@@ -447,6 +447,10 @@ button:hover {
 .workspace-tab-header.is-active {
   background-color: var(--token-tab-bg-active);
   color: var(--token-tab-color-active);
+}
+
+.workspace-tab-header::before, .workspace-tab-header::after {
+  display: none;
 }
 
 /* Sidebar using token system */

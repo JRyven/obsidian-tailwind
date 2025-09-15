@@ -1,0 +1,180 @@
+/* ==========================================================================
+   Header Styles
+   Common styles for all header levels with specific overrides
+   ========================================================================== */
+
+/* Common header styles - applies to all headers */
+.cm-active[class*="HyperMD-header"], 
+.markdown-rendered div > :is(h1, h2, h3, h4, h5, h6) {
+  padding-left: var(--token-space-6);
+  padding-right: var(--token-space-4);
+  border-radius: var(--token-radius-md);
+  border-left-width: var(--token-space-1);
+  border-left-style: solid;
+  margin: var(--token-space-4) 0;
+}
+
+/* Specific styles for each header level - H1 */
+.cm-active.HyperMD-header-1, .markdown-rendered div > h1 {
+  font-size: var(--token-header-h1-size);
+  line-height: var(--token-header-h1-leading);
+  background-color: var(--token-header-h1-bg);
+  color: var(--token-header-h1-color);
+  border-left-color: var(--token-header-h1-border);
+  padding-top: var(--token-header-h1-padding-y);
+  padding-bottom: var(--token-header-h1-padding-y);
+}
+
+/* H2 */
+.cm-active.HyperMD-header-2, .markdown-rendered div > h2 {
+  font-size: var(--token-header-h2-size);
+  line-height: var(--token-header-h2-leading);
+  background-color: var(--token-header-h2-bg);
+  color: var(--token-header-h2-color);
+  border-left-color: var(--token-header-h2-border);
+  padding-top: var(--token-header-h2-padding-y);
+  padding-bottom: var(--token-header-h2-padding-y);
+}
+
+/* H3 */
+.cm-active.HyperMD-header-3, .markdown-rendered div > h3 {
+  font-size: var(--token-header-h3-size);
+  line-height: var(--token-header-h3-leading);
+  background-color: var(--token-header-h3-bg);
+  color: var(--token-header-h3-color);
+  border-left-color: var(--token-header-h3-border);
+  padding-top: var(--token-header-h3-padding-y);
+  padding-bottom: var(--token-header-h3-padding-y);
+}
+
+/* H4 */
+.cm-active.HyperMD-header-4, .markdown-rendered div > h4 {
+  font-size: var(--token-header-h4-size);
+  line-height: var(--token-header-h4-leading);
+  background-color: var(--token-header-h4-bg);
+  color: var(--token-header-h4-color);
+  border-left-color: var(--token-header-h4-border);
+  padding-top: var(--token-header-h4-padding-y);
+  padding-bottom: var(--token-header-h4-padding-y);
+}
+
+/* H5 */
+.cm-active.HyperMD-header-5, .markdown-rendered div > h5 {
+  font-size: var(--token-header-h5-size);
+  line-height: var(--token-header-h5-leading);
+  background-color: var(--token-header-h5-bg);
+  color: var(--token-header-h5-color);
+  border-left-color: var(--token-header-h5-border);
+  padding-top: var(--token-header-h5-padding-y);
+  padding-bottom: var(--token-header-h5-padding-y);
+}
+
+/* H6 - Now using correct h6 variables */
+.cm-active.HyperMD-header-6, .markdown-rendered div > h6 {
+  font-size: var(--token-header-h6-size);
+  line-height: var(--token-header-h6-leading);
+  background-color: var(--token-header-h6-bg);
+  color: var(--token-header-h6-color);
+  border-left-color: var(--token-header-h6-border);
+  padding-top: var(--token-header-h6-padding-y);
+  padding-bottom: var(--token-header-h6-padding-y);
+}
+
+/* ==========================================================================
+   Button Styles
+   ========================================================================== */
+button {
+  background-color: var(--token-button-bg);
+  color: var(--token-button-color);
+  padding: var(--token-button-padding-y) var(--token-button-padding-x);
+  border-radius: var(--token-button-radius);
+  border: none;
+  cursor: pointer;
+  transition: all var(--token-transition-fast);
+}
+
+button:hover {
+  background-color: var(--token-button-bg-hover);
+  color: var(--token-button-color-hover);
+}
+
+/* ==========================================================================
+   Tab Navigation Styles
+   ========================================================================== */
+.workspace-tab-header {
+  background-color: var(--token-tab-bg);
+  color: var(--token-tab-color);
+  border-bottom: 1px solid var(--token-tab-border);
+  padding: var(--token-tab-padding-y) var(--token-tab-padding-x);
+  transition: all var(--token-transition-fast);
+}
+
+.workspace-tab-header.is-active {
+  background-color: var(--token-tab-bg-active);
+  color: var(--token-tab-color-active);
+}
+
+.workspace-tab-header::before, 
+.workspace-tab-header::after {
+  display: none;
+}
+
+/* ==========================================================================
+   File Explorer & Navigation Styles
+   ========================================================================== */
+.nav-folder, 
+.nav-file {
+  padding: var(--token-sidebar-item-padding-y) var(--token-sidebar-item-padding-x);
+  border-radius: var(--token-sidebar-item-radius);
+  transition: all var(--token-transition-fast);
+}
+
+.nav-folder:hover, 
+.nav-file:hover {
+  background-color: var(--token-interactive-hover);
+}
+
+/* ==========================================================================
+   Status Bar Styles
+   ========================================================================== */
+.status-bar {
+  background-color: var(--token-bg-secondary);
+  border-top: 1px solid var(--token-bg-modifier-border);
+  padding: var(--token-space-1) var(--token-space-2);
+}
+
+/* ==========================================================================
+   Editor Styles
+   ========================================================================== */
+.inline-title {
+  font-size: var(--token-header-h1-size);
+  line-height: var(--token-header-h1-leading);
+  color: var(--token-text-accent);
+  font-weight: 700;
+  margin-bottom: var(--token-space-5);
+}
+
+/* ==========================================================================
+   Code Block Styles
+   ========================================================================== */
+pre, code {
+  background-color: var(--token-bg-primary-alt);
+  border: 1px solid var(--token-bg-modifier-border);
+  border-radius: var(--token-radius);
+  padding: var(--token-space-1);
+}
+
+pre {
+  padding: var(--token-space-4);
+  margin: var(--token-space-2) 0;
+}
+
+/* ==========================================================================
+   Blockquote Styles
+   ========================================================================== */
+blockquote {
+  border-left: var(--token-space-1) solid var(--token-text-accent);
+  padding-left: var(--token-space-4);
+  margin: var(--token-space-4) 0;
+  color: var(--token-text-muted);
+}

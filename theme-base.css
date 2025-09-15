@@ -1,0 +1,60 @@
+/* ==========================================================================
+   TailWind Theme for Obsidian
+   A modern, token-based design system for Obsidian using TailwindCSS principles
+   
+   This theme uses a design token system that makes it easy to customize through
+   CSS snippets. The structure is organized as follows:
+   
+   1. Layer declarations - Controls cascade order
+   2. Base color & font definitions - Raw values
+   3. Design token system - Semantic mappings
+   4. Component styles - Organized by UI element type
+   5. Utilities - Helper classes and overrides
+   
+   The theme is designed to work with drop-in CSS snippets like:
+   - theme-gray-purple.css - Alternative color scheme
+   - theme-rounded.css - More rounded styling
+   - theme-interactive.css - Enhanced animations
+   
+   For information on customization, see the Snippet Author Guide at the end.
+   ========================================================================== */
+
+@layer properties;
+@layer theme, base, components, utilities;
+
+/* ==========================================================================
+   Base Color and Font Definitions
+   The foundational color palette and typography settings
+   ========================================================================== */
+@layer theme {
+  :root, :host {
+    /* Font definitions */
+    --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+      "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+      "Courier New", monospace;
+    --default-font-family: var(--font-sans);
+    
+    /* Font family assignments */
+    --default-mono-font-family: var(--font-mono);
+  }
+}
+
+/* ==========================================================================
+   Snippet Author Guide
+   
+   To customize this theme:
+   
+   1. For color schemes: Override --token-background-* and --token-text-* variables
+      Example: Use theme-gray-purple.css to change colors
+      
+   2. For animations: Override --token-transition-* and --token-scale-* variables
+      Example: Use theme-interactive.css for smoother animations
+      
+   3. For box styles: Override --token-radius-* variables
+      Example: Use theme-rounded.css for more rounded corners
+   
+   4. For typography: Override --token-text-* size variables and font families
+   
+   CSS specificity is kept intentionally low to make overriding easy.
+   ========================================================================== */

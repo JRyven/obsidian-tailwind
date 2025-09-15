@@ -69,7 +69,7 @@ button:focus,
 }
 
 .workspace-tab-header:hover {
-  transform: translateY(-2px) scale(1.02);
+  transform: scale(1.04);
   box-shadow: var(--token-shadow-md);
 }
 
@@ -94,7 +94,6 @@ button:focus,
 
 .nav-folder:hover,
 .nav-file:hover {
-  transform: translateX(4px) scale(1.01);
   background-color: var(--token-interactive-hover);
   box-shadow: var(--token-shadow-sm);
 }
@@ -217,7 +216,7 @@ textarea:focus,
 
 .suggestion-item:hover,
 .menu-item:hover {
-  transform: translateX(4px) scale(1.01);
+  transform:  scale(1.01);
   background-color: var(--token-interactive-hover);
 }
 
